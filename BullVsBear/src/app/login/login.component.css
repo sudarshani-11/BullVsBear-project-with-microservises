@@ -1,0 +1,97 @@
+/* 'Open Sans' font from Google Fonts */
+
+.login {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top:250px;
+  width: 400px;
+  margin: 16px auto;
+  align-self: center;
+  font-size: 16px;
+  background-image: url(../../assets/images/bg.jpg);
+  background-color: rgba(0,0,0,0.6);
+  background-size: cover;
+  border: rgb(6, 6, 7);
+  z-index: 1;
+}
+
+.login-header,
+.login div {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a
+{
+  color: blue;
+}
+
+.login-header {
+  background:none;
+  padding: 13px;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(191, 174, 212);
+}
+
+.login-container {
+  background:none;
+  padding: 12px;
+}
+
+.login div {
+  padding: 12px;
+}
+.login div i
+{
+  margin: 8px;
+  color: rgb(17, 17, 17);
+}
+.login input {
+  width: 90%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  color: rgb(250, 244, 236);
+  font-family: inherit;
+  border-color: wheat;
+  font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  background:none;
+  color: rgb(223, 226, 248);
+}
+
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+  border-color: rgb(10, 22, 78);
+}
+
+.login input[type="submit"] {
+  width: 100%;
+  background: none;
+  border-color: rgb(18, 8, 61);
+  color: rgb(195, 189, 216);
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  box-shadow: rgb(132, 192, 253);
+  border-color: rgb(43, 181, 245);
+}
+
+.login input[type="submit"]:focus {
+  border-color: rgb(132, 192, 253);
+}
+
+.has-error input[type="email"],
+.has-error input[type="password"] {
+    border-color: rgb(216, 12, 12);
+    color: rgb(230, 14, 14);
+}

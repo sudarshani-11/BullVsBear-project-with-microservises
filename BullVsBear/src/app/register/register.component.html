@@ -1,0 +1,73 @@
+<body>
+<div class="img">
+  <div class="login">
+	<h2 class="login-header">Register</h2>
+    <form class="login-container" [formGroup]="registerForm" (ngSubmit)="onSubmit()" method="POST">
+        <div class="form-group" >
+            <label>First Name</label>
+            <input type="text" class="form-control" formControlName="firstName">
+            <span class="text-danger"
+                *ngIf="(registerFormControl.firstName.touched || submitted) && registerFormControl.firstName.errors?.required">
+                  First Name is required
+            </span>
+            <span class="text-danger"
+            *ngIf="registerFormControl.firstName.touched && registerFormControl.firstName.errors?.invalidPassword">
+            First name can contains only alphabets , min 1 chars , max 20 chars.
+        </span>
+
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="form-control" formControlName="lastName">
+            <span class="text-danger"
+                *ngIf="(registerFormControl.lastName.touched || submitted) && registerFormControl.lastName.errors?.required">
+                  last Name is required
+            </span>
+            <span class="text-danger"
+            *ngIf="registerFormControl.lastName.touched && registerFormControl.lastName.errors?.invalidPassword">
+            Last name can contains only alphabets , min 1 chars , max 20 chars.
+        </span>
+        </div>
+        <div class="form-group">
+            <label>User Name</label>
+            <input type="text" class="form-control" formControlName="userName">
+            <span class="text-danger"
+                *ngIf="(registerFormControl.userName.touched || submitted) && registerFormControl.userName.errors?.required">
+                User Name is required
+            </span>
+            <span class="text-danger"
+                *ngIf="registerFormControl.userName.touched && registerFormControl.userName.errors?.invalidPassword">
+                User name can contains only alphabets in lower case and numeric char, min 1 chars , max 15 chars.
+            </span>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" formControlName="password">
+            <span class="text-danger"
+                *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
+                Password is required
+            </span>
+            <span class="text-danger"
+                *ngIf="registerFormControl.password.touched && registerFormControl.password.errors?.invalidPassword">
+                Attention!! Please check the password, it must be alphanumeric with atleast one special char(!,@,#,$,%,^,&,*,(,),_,-,) with min 8 chars and max 16 chars.
+            </span>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" formControlName="email">
+            <span class="text-danger"
+                *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
+                Email is required
+            </span>
+            <span class="text-danger"
+                *ngIf="registerFormControl.email.touched && registerFormControl.email.errors?.invalidPassword">
+                Please provide proper email address. All alphabets must be in lowercase
+            </span>
+        </div>
+        <p>
+          <input type="submit" value="Register">
+        </p>
+    </form>
+  </div>
+</div>
+</body>

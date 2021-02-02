@@ -1,0 +1,145 @@
+*
+{
+    margin : 0;
+    padding : 0;
+}
+body
+{
+  background-image: inherit;
+}
+.pop
+{
+    box-sizing: content-box;
+    position:fixed;
+    top: 200px;
+    left:200px;
+    width: 200px;
+    height: 200px;
+    background-color: #5e00eb ;
+background-image:linear-gradient(to bottom,#5e00eb 0%, #b38aff 74%);
+    box-shadow: -5px 5px 25px #000;
+    color: ghostwhite;
+    transition: width 2s,height 2s;
+}
+.pop:hover
+{
+  width: 300px;
+  height: 400px;
+  text-align: left;
+  padding: 5px;
+}
+.pop:hover .back
+{
+  
+  animation: twirl 1s ease-in forwards;
+}
+/*Animation*/
+.pop
+{
+    top: -250px;
+    animation :drop 0.7s ease forwards;
+}
+@keyframes drop{
+0%{opacity: 0;}
+70%{transform :translateY(700px)}
+100%{transform: translateY(550px); opacity: 1;}
+}
+
+/*2nd*/
+.wrapper{
+  box-sizing: content-box;
+  position:fixed;
+  top: 200px;
+  left:600px;
+  width: 200px;
+  height: 200px;
+    text-align:left;
+    float: left;
+    margin: 40px auto;
+    color: ghostwhite;
+    background-color: #5e00eb ;
+    background-image:linear-gradient(to bottom,#5e00eb 0%, #b38aff 74%);
+
+    transition: width 2s,height 2s;
+    box-shadow: -5px 5px 25px #000;
+  }
+  .wrapper
+{ 
+   
+    top: -290px;
+    animation :drop 1s ease forwards;
+}
+  .wrapper:hover
+  {
+    width: 300px;
+    height: 300px;
+    text-align: left;
+    padding: 5px;
+  }
+  .back
+  {
+    
+    color: ghostwhite;
+    transform:rotateY(90deg) ;
+  }
+  .wrapper:hover .back
+  {
+    
+    animation: twirl 1s ease-in forwards;
+  }
+ 
+
+
+@keyframes twirl{
+    0%{transform: rotateY(90deg)}
+    100%{ transform: rotateY(0deg);}
+}
+
+/*3rd*/
+
+.contact{
+  box-sizing: content-box;
+  position:fixed;
+  top: 200px;
+  left:1000px;
+  width: 200px;
+  height: 200px;
+    text-align:left;
+    float: left;
+    margin: 40px auto;
+    background-color: #5e00eb ;
+    background-image:linear-gradient(to bottom,#5e00eb 0%, #b38aff 74%);
+    color: ghostwhite;
+    transition: width 2s,height 2s;
+    box-shadow: -5px 5px 25px #000;
+  }
+  a
+  {
+    color: rgb(14, 14, 95);
+  }
+  .contact
+{ 
+   
+    top: -290px;
+    animation :drop 1.2s ease forwards;
+}
+
+  .contact:hover
+  {
+    width: 300px;
+    height: 300px;
+    text-align: left;
+    padding: 5px;
+  }
+  .back
+  {
+    
+    color: ghostwhite;
+    transform:rotateY(90deg) ;
+  }
+  .contact:hover .back
+  {
+    
+    animation: twirl 1s ease-in forwards;
+  }
+ 

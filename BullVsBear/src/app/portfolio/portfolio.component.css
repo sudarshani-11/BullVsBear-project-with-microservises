@@ -1,0 +1,151 @@
+.search
+{
+   position: absolute;
+   right: 550px;
+   top:200px;
+  background: none
+  
+}
+.search input[type="submit"]
+{
+    border-color: rgb(18, 8, 61);
+    background-color: rgb(15, 143, 235);
+    cursor: pointer;
+    margin-left: 5px;
+
+}
+.search input[type="text"]
+{    
+  color: rgb(31, 28, 24);
+    margin-left: 3px;
+    background: none;
+}
+i ,label
+{
+  color: rgb(20, 20, 19);
+}
+
+.table
+  {
+    position: absolute;
+    right:90px;
+    top: 250px;
+    width: 400px;
+    height: 400px;
+    margin: 15px;
+    padding: 15px;
+      width: 500px;
+    overflow-x:auto;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: whitesmoke;
+  }
+  .editbtn
+  {
+      vertical-align: auto;
+      background-color: royalblue;   
+      width: 100%;
+  }
+
+.list
+{
+  position: absolute;
+    left:20px;
+    top: 250px;
+    width: 400px;
+    margin: 15px;
+    text-align:center;
+    color: bisque;
+}
+.list2
+{
+  position: absolute;
+  left:400px;
+  top: 250px;
+  width: 400px;
+  margin: 15px;
+  text-align:center;
+  color: bisque;
+}
+ul {
+  padding: 0;
+  display: block;
+  margin: 24px auto;
+  width: 320px;
+}
+
+li {
+  display: block;
+  height: 72px;
+  width: 300px;
+  background-color: #009688;
+  animation-name: animateIn;
+  animation-duration: 1s;
+  animation-delay: calc(var(--animation-order) * 100ms);
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+li + li {
+  margin-top: 16px;
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(-8px);
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+.HData
+{ 
+  position: absolute;
+  top:700px;
+  right: 80px;
+  width: 600px;
+  height: 500px;
+  margin: 15px;
+    padding: 15px;
+    overflow-x:auto;
+    overflow-y: auto;
+    background-color:  #009688;
+    color: whitesmoke;
+}
+.divofnews
+  {
+    position:absolute;
+    top:700px;
+    right: 80px;
+  width: 600px;
+  height: 500px;
+    overflow-y: auto;
+    overflow-y: auto;
+  }
+  .divofnews h3
+  {
+    color: royalblue;
+    text-decoration-line: underline;
+  }
+.news
+{   
+
+   background :linear-gradient(to left, rgb(112,101,214),rgb(230,106,213));
+    color: rgb(19, 18, 18);
+    text-align: center;
+    animation-name: animateIn;
+    
+}
+.news + .news
+{
+  margin-top: 16px; 
+}
+.news :hover
+{
+  box-shadow: 0px 10px 1px rgba(0, 0, 0, 0.6);
+    background-color:rgb(110, 98, 216) ;
+    border-radius: 3px;
+}

@@ -1,0 +1,58 @@
+<body>
+<form [formGroup]="searchform"(ngSubmit)="onSubmit()">
+    <div class="search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <label>Search</label>
+    <input  type="text" placeholder="enter Quote name" formControlName="search">
+    <input type="submit" value="search">
+   </div>
+</form>
+<div class="list">
+    <ul>
+        <li>Search Result</li>
+    <li *ngFor="let quote of quotes ;let i=index ; let qprice of qprice" (click)="ClickedRow(i)">{{quote.shortname}}</li>
+   </ul>
+</div>
+<div  *ngIf ="!isCollapsed" class="table">
+    <table>
+        <tr>
+      <th>Market Price</th>
+      <td>{{qprice.regularMarketPrice}}</td>
+      <th>Fiftytwo week range</th>
+      <td>{{qprice.fiftyTwoWeekRange}}</td>
+       </tr>
+       <tr>
+        <th>Range</th>
+        <td>{{qprice.regularMarketDayRange}}</td>
+        <th>shortname</th>
+        <td>{{selected.shortname}}</td>
+        <td>{{qprice.currency}}</td>
+       </tr>
+      <tr>
+        <th>High</th>
+        <td>{{qprice.regularMarketDayHigh}}</td>
+        <th> quoteType</th>
+        <td>{{selected.quoteType}}</td>
+      </tr>
+      <tr>
+        <th>Open</th>
+        <td>{{qprice.regularMarketOpen}}</td>
+        <th> symbol</th>
+        <td>{{selected.symbol}}</td>
+      </tr>
+      <tr>
+        <th>Bid</th>
+        <td>{{qprice.bid}}</td>
+        <th> typeDisp</th>
+        <td>{{selected.typeDisp}}</td>
+      </tr>
+      <tr>
+        <th> Ask</th>
+        <td>{{qprice.ask}}</td>
+        <th> longname</th>
+        <td>{{selected.longname}}</td>
+      </tr>          
+    </table>
+</div>
+
+</body>

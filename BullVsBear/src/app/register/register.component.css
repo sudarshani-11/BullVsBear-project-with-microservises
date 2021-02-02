@@ -1,0 +1,95 @@
+/* 'Open Sans' font from Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+.img
+{
+  background-color: burlywood;
+}
+.login {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top:200pt;
+  width: 400px;
+  margin: 16px auto;
+  align-self: center;
+  font-size: 16px;
+  background-image: url(../../assets/images/bg.jpg) ;
+  background-size: cover;
+  border: rgb(222, 227, 233);
+  z-index: 1;
+}
+
+.login-header,
+.login div {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+
+.login-header {
+  background:none;
+  padding: 13px;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(191, 174, 212);
+}
+
+.login-container {
+  background:none;
+  padding: 12px;
+}
+
+.login div {
+  padding: 12px;
+}
+.login div i
+{
+  margin: 8px;
+}
+.login input {
+  width: 90%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  color: antiquewhite;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.login input[type="password"],
+.login input[type="text"] {
+  background:none;
+  border-color:black;
+  color: rgb(238, 236, 243);
+}
+
+.login input[type="password"],
+.login input[type="text"]:focus {
+  border-color: rgb(31, 38, 87);
+}
+
+.login input[type="submit"] {
+  width: 100%;
+  background: none;
+  border-color: rgb(41, 32, 124);
+  color: rgb(165, 182, 214);
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  box-shadow: rgb(132, 192, 253);
+  border-color: rgb(43, 181, 245);
+}
+
+.login input[type="submit"]:focus {
+  border-color: rgb(132, 192, 253);
+}
+
+.has-error input[type="text"] {
+    border-color: rgb(216, 12, 12);
+    color: rgb(230, 14, 14);
+}

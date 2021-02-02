@@ -1,0 +1,104 @@
+
+<form [formGroup]="searchform"(ngSubmit)="onSubmit()">
+    <div class="search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <label>Search</label>
+    <input  type="text" placeholder="enter Quote name" formControlName="search">
+    <input type="submit" value="search">
+   </div>
+</form>
+<div class="list">
+    <ul>
+        <li>Search Results</li>
+    <li *ngFor="let quote of quotes ;let i=index" (click)="ClickedRow(i)">{{quote.shortname}}</li>
+   </ul>
+</div>
+<div  *ngIf ="!isTableCollapsed" class="table">
+    <table>
+        <tr>
+      <th>Market Price</th>
+      <td>{{qprice.regularMarketPrice}}</td>
+      <th>Fiftytwo week range</th>
+      <td>{{qprice.fiftyTwoWeekRange}}</td>
+      <th>Currency</th>
+      <td>{{qprice.currency}}</td>
+       </tr>
+       <tr>
+        <th>Range</th>
+        <td>{{qprice.regularMarketDayRange}}</td>
+        <th>shortname</th>
+        <td>{{selected.shortname}}</td>
+        
+       </tr>
+      <tr>
+        <th>High</th>
+        <td>{{qprice.regularMarketDayHigh}}</td>
+        <th> quoteType</th>
+        <td>{{selected.quoteType}}</td>
+      </tr>
+      <tr>
+        <th>Open</th>
+        <td>{{qprice.regularMarketOpen}}</td>
+        <th> symbol</th>
+        <td>{{selected.symbol}}</td>
+      </tr>
+      <tr>
+        <th>Bid</th>
+        <td>{{qprice.bid}}</td>
+        <th> typeDisp</th>
+        <td>{{selected.typeDisp}}</td>
+      </tr>
+      <tr>
+        <th> Ask</th>
+        <td>{{qprice.ask}}</td>
+        <th> longname</th>
+        <td>{{selected.longname}}</td>
+      </tr>          
+    </table>
+    <table>
+        <tr>
+        <td><button class="editbtn" (click)= "News()" >News</button></td>
+        <td><button class="editbtn" (click)= "History()" >History</button></td>
+        <td><button class="editbtn" (click)= "AddToWatchlist()">Add to watclist</button></td>
+       </tr>
+</table>
+</div>
+
+
+
+<div class="HData" *ngIf ="!isHistoryCollapsed">
+    <table>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>History</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <th>Open</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>Close</th>
+            <th>Volume</th>
+        </tr>
+        <tr *ngFor="let data of hdata ;index as i ;  let date of datesStrings">
+            <td  >{{(data.date *1000) | date}}</td>
+            <td  >{{data.open}}</td>
+            <td  >{{data.high}}</td>
+            <td  >{{data.low}}</td>
+            <td  >{{data.close}}</td>
+            <td  >{{data.volume}}</td>
+        </tr>
+    </table>
+</div>
+<div  class="divofnews" *ngIf ="!isNewsCollapsed">
+    <h3>News</h3>
+    <div class="news" *ngFor="let new of newsMany ">
+        <h4 >{{new.publisher}}</h4>
+       <h4><a href="{{new.link}}.url">{{new.link}}</a></h4> 
+    </div>
+     
+</div>

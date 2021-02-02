@@ -1,0 +1,53 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.logo
+{
+    float: left;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+}
+h1
+{
+    text-align: center;
+} 
+p
+{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.menu-bar
+{   
+    
+    background: rgb(76, 59, 172);
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color: silver;
+}
+.menu-bar ul li
+{
+    display: inline-flex;
+    width: 100px;
+    padding: 15px;
+}
+.menu-bar ul a
+{
+    text-decoration: none;
+    color :white;
+}
+.menu-bar ul a:hover
+{
+    background-color:rgb(110, 98, 216) ;
+    border-radius: 3px;
+}
+.menu-bar .fa
+{
+    align-self: start;
+    margin-right: 8px;
+}

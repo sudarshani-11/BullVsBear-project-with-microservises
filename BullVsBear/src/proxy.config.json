@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "http://localhost:8081/bullvsbear",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

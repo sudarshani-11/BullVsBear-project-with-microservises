@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+    <div class="header">
+<img class="logo" src="../assets/images/logo.jpeg "><h1>BullVsBear</h1>
+<p>Everything you need to know about Trading</p>
+    </div>
+<body>
+<div class="menu-bar">
+<ul>
+    <li>
+        <i class="fa fa-home"></i> <a routerLink = " ">Home</a>
+    </li>
+    <li><i class="fa fa-user-circle"></i><a routerLink="/portfolio">Portfolio</a></li>
+    <li><i class="fa fa-bar-chart"></i><a  routerLink="/stock">Market</a></li>
+    <li> <i class="fa fa-sign-in" ></i><a  routerLink="/login">Login</a></li>
+    <li><i class="fa fa-registered"></i><a routerLink ="/register">Register</a></li>
+    <li (click)= "logout()"><i class="fa fa-sign-out"></i><a>Logout</a></li>
+    <li >{{name}}</li>
+</ul>
+</div>
+</body>
+</html>
